@@ -4,13 +4,13 @@ import React, {useState} from 'react';
 import stylesObj from './styles';
 
 interface SwitchPropType {
-  id?: number;
-  title?: string;
+  id: number;
+  title: string;
 }
 
 interface Props {
   bgColor?: ColorValue | undefined;
-  onTabChange?: (_index: number) => void;
+  onTabChange?: (_index: number, title: string) => void;
   switchData?: SwitchPropType[];
 }
 
@@ -38,7 +38,7 @@ const CustomSwitch = (props: typeof deafalutProps): React.ReactElement => {
         <TouchableOpacity
           onPress={() => {
             setSelectedIndex(index);
-            onTabChange?.(index);
+            onTabChange?.(item.id, item.title);
           }}
           style={[
             styles.tab,
