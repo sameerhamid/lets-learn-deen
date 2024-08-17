@@ -19,4 +19,5 @@ export const IMAGES = {
   CHANGE_VIEW: require('../assets/images/changeView.png'),
   REPORT: require('../assets/images/report.png'),
   SETTING: require('../assets/images/settings.png'),
+  CHECK: require('../assets/images/check.png'),
 };
