@@ -9,9 +9,5 @@ export class SecretManager {
       Config.POSTS_URL! ?? '',
       Config.BASIC_URL! ?? '',
     );
-
-    console.log(
-      `url>>>>>>>>${JSON.stringify(SecretManager.configModle.basicUrl)}`,
-    );
   }
 }

@@ -44,12 +44,9 @@ export const Post = async (
   api
     .post(url, data)
     .then(res => {
-      console.log(res.data);
       successCallback(res.data);
     })
     .catch(err => {
-      console.log(err);
-
       errorCallback(err?.message);
     });
 };
@@ -68,11 +65,9 @@ export const Get = async (
   api
     .get(url)
     .then(response => {
-      console.log(response.data);
       successCallback(response.data);
     })
     .catch(error => {
-      console.log(error);
       errorCallback(error);
     });
 };

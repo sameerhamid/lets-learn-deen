@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import {IMAGES} from '../../constants/images';
 import styles from './styles';
@@ -16,6 +16,14 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
   onValueChange,
 }) => {
   const [checked, setChecked] = useState<boolean>(isChecked);
+
+  console.log('state>>>', checked);
+
+  useEffect(() => {
+    if (isChecked) {
+      setChecked(isChecked);
+    }
+  }, [isChecked]);
 
   const handlePress = () => {
     setChecked(!checked);

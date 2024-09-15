@@ -1,11 +1,14 @@
 import React from 'react';
 import AppNavigation from './src/common/routes/appNavigation';
 
-import Config from 'react-native-config';
+import {StudentProvider} from './src/common/context/StudentContext';
 
 function App(): React.JSX.Element {
-  console.log('config>>>', Config.BASIC_URL);
-  return <AppNavigation />;
+  return (
+    <StudentProvider>
+      <AppNavigation />
+    </StudentProvider>
+  );
 }
 
 export default App;

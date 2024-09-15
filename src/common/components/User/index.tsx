@@ -3,7 +3,7 @@ import React from 'react';
 import {IMAGES} from '../../constants/images';
 import styles from './styles';
 export interface UserType {
-  name?: string;
+  name: string;
   profileImg?: string;
   email?: string;
   phone?: string;
