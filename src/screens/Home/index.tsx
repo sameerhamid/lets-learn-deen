@@ -13,6 +13,7 @@ import {
 
 function Home() {
   const {loading, users, handlerUserClick} = useHomeController();
+  console.log('users', users);
 
   return (
     <View style={{width: '100%', marginBottom: 54}}>
